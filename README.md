@@ -1,1 +1,1 @@
-# gradient-borders-with-curves-and-3d-animation-in-css
+# Gradient borders with curves and 3D animation in CSS
