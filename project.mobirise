@@ -1,0 +1,240 @@
+{
+  "settings": {
+    "name": "Gradient borders with curves and 3D animation in CSS",
+    "currentPage": "index.html",
+    "theme": {
+      "name": "mobirise5",
+      "title": "Mobirise 5",
+      "styling": {
+        "primaryColor": "#6592e6",
+        "secondaryColor": "#ff6666",
+        "successColor": "#40b0bf",
+        "infoColor": "#47b5ed",
+        "warningColor": "#FFE161",
+        "dangerColor": "#ff9966",
+        "mainFont": "Jost",
+        "display1Font": "Quicksand",
+        "display1Size": 4.6,
+        "display2Font": "Quicksand",
+        "display2Size": 3,
+        "display5Font": "Quicksand",
+        "display5Size": 2,
+        "display7Font": "Quicksand",
+        "display7Size": 1.2,
+        "display4Font": "Quicksand",
+        "display4Size": 1.1,
+        "isRoundedButtons": false,
+        "isGhostButtonBorder": true,
+        "underlinedLinks": false,
+        "isAnimatedOnScroll": false,
+        "isScrollToTopButton": false
+      },
+      "additionalSetColors": []
+    },
+    "path": "@PROJECT_PATH@",
+    "versionFirst": "5.2.0",
+    "siteFonts": [
+      {
+        "css": "'Quicksand', sans-serif",
+        "name": "Quicksand",
+        "url": "https://fonts.googleapis.com/css?family=Quicksand:300,400,500,600,700"
+      }
+    ],
+    "favicon": false,
+    "imageResize": false,
+    "cssOptimize": false,
+    "lazyLoad": false,
+    "lazyType": "nothing",
+    "robotsSwitcher": false,
+    "sitemapSwitcher": false,
+    "sitemapSwitcherAuto": false,
+    "siteUrl": false,
+    "cookiesAlert": false,
+    "gdpr": false,
+    "pwa-switcher": false,
+    "uniqCompNum": 1,
+    "versionPublish": "5.2.0"
+  },
+  "pages": {
+    "index.html": {
+      "settings": {
+        "main": true,
+        "title": "Gradient borders with curves and 3D animation in CSS",
+        "meta_descr": "Gradient borders with curves and 3D animation in CSS",
+        "header_custom": "",
+        "footer_custom": "    <script>\n      const ticketElm = document.getElementById('ticket');\n      const { x, y, width, height } = ticketElm.getBoundingClientRect();\n      const centerPoint = { x: x + width / 2, y: y + height / 2 };\n\n      window.addEventListener('mousemove', (e) => {\n        const degreeX = (e.clientY - centerPoint.y) * 0.008;\n        const degreeY = (e.clientX - centerPoint.x) * -0.008;\n\n        ticketElm.style.transform = `perspective(1000px) rotateX(${degreeX}deg) rotateY(${degreeY}deg)`;\n      });\n    </script>\n",
+        "html_before": ""
+      },
+      "components": [
+        {
+          "alias": false,
+          "_styles": {
+            "& when not (@fullScreen)": {
+              "padding-top": "(@paddingTop * 1rem)",
+              "padding-bottom": "(@paddingBottom * 1rem)"
+            },
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)"
+            },
+            "@size": "1",
+            "@background": "#000000",
+            "@color1": "#d25778",
+            "@color2": "#ec585c",
+            "@color3": "#e7d155",
+            "@color4": "#56a8c6",
+            "background": "@background",
+            "color": "white",
+            "font-family": "Arial, Helvetica, sans-serif",
+            "box-sizing": "border-box",
+            ".ticket-visual_visual": {
+              "width": "650px",
+              "height": "320px",
+              "margin": "100px auto",
+              "position": "relative",
+              "transition": "all 300ms cubic-bezier(0.03, 0.98, 0.53, 0.99) 0s",
+              "background": "linear-gradient(to right, @color1, @color2, @color3, @color4)",
+              "border-radius": "20px",
+              "padding": "5px"
+            },
+            ".ticket-visual_visual:before": {
+              "content": "\"\"",
+              "display": "block",
+              "position": "absolute",
+              "top": "130px",
+              "left": "-30px",
+              "width": "60px",
+              "height": "60px",
+              "border-radius": "50%",
+              "background": "@color1",
+              "z-index": "2"
+            },
+            ".ticket-visual_visual:after": {
+              "content": "\"\"",
+              "display": "block",
+              "position": "absolute",
+              "top": "130px",
+              "right": "-30px",
+              "width": "60px",
+              "height": "60px",
+              "border-radius": "50%",
+              "background": "@color4",
+              "z-index": "2"
+            },
+            ".ticket-visual-wrapper": {
+              "width": "100%",
+              "height": "100%",
+              "position": "relative",
+              "background": "@background",
+              "border-radius": "15px"
+            },
+            ".ticket-visual-wrapper:before": {
+              "content": "\"\"",
+              "display": "block",
+              "position": "absolute",
+              "top": "130px",
+              "left": "-30px",
+              "width": "50px",
+              "height": "50px",
+              "border-radius": "50%",
+              "background": "@background",
+              "z-index": "3"
+            },
+            ".ticket-visual-wrapper:after": {
+              "content": "\"\"",
+              "display": "block",
+              "position": "absolute",
+              "top": "130px",
+              "right": "-30px",
+              "width": "50px",
+              "height": "50px",
+              "border-radius": "50%",
+              "background": "@background",
+              "z-index": "3"
+            },
+            ".left": {
+              "position": "absolute",
+              "top": "110px",
+              "left": "-50px",
+              "width": "50px",
+              "height": "100px",
+              "background": "@background",
+              "z-index": "4"
+            },
+            ".right": {
+              "position": "absolute",
+              "top": "110px",
+              "right": "-50px",
+              "width": "50px",
+              "height": "100px",
+              "background": "@background",
+              "z-index": "4"
+            },
+            ".ticket-visual_profile": {
+              "padding": "(39px * @size) (155px * @size) (39px * @size) (58px * @size)"
+            },
+            ".ticket-profile_text": {
+              "margin": "0"
+            },
+            ".ticket-profile_profile": {
+              "display": "flex",
+              "flex-direction": "row"
+            },
+            ".ticket-event": {
+              "margin-top": "25px",
+              "margin-left": "-10px"
+            },
+            ".ticket-profile_image": {
+              "width": "(82px * @size)",
+              "height": "(82px * @size)",
+              "border-radius": "50%"
+            },
+            ".ticket-profile_name": {
+              "font-size": "(32px * @size)",
+              "margin": "10px 0 5px 20px",
+              "font-weight": "700"
+            },
+            ".ticket-profile_username": {
+              "margin": "0 0 5px 20px",
+              "color": "#8a8f98",
+              "display": "flex"
+            },
+            ".ticket-profile_githubIcon img": {
+              "width": "18px",
+              "height": "18px",
+              "margin-right": "5px"
+            },
+            ".ticket-visual_ticket-number-wrapper": {
+              "position": "absolute",
+              "right": "35px",
+              "bottom": "0"
+            },
+            ".ticket-visual_ticket-number": {
+              "transform": "rotate(90deg) translateY(100px * @size)",
+              "transform-origin": "bottom right",
+              "font-size": "(40px * @size)",
+              "font-weight": "700",
+              "text-align": "center",
+              "padding-bottom": "35px",
+              "width": "(320px - 10px)",
+              "border-bottom": "2px dashed #333"
+            }
+          },
+          "_name": "content4",
+          "_sourceTheme": "mobirise5",
+          "_customHTML": "<section class=\"content4\" group=\"Content\" data-bg-video=\"{{bg.type == 'video'&&bg.value.url}}\" mbr-class=\"{\n    'mbr-fullscreen': fullScreen,\n    'mbr-parallax-background': bg.parallax}\">\n    <mbr-parameters>\n        <header>Size</header>\n        <input type=\"checkbox\" title=\"Full Screen\" name=\"fullScreen\" checked>\n        <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\" checked>\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"5\" condition=\"fullScreen == false\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"5\" condition=\"fullScreen == false\">\n        <input type=\"range\" name=\"textWidth\" title=\"Width\" min=\"4\" max=\"12\" step=\"1\" value=\"12\">\n        <header>Show/Hide</header>\n        <input type=\"checkbox\" title=\"Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Subtitle\" name=\"showSubtitle\">\n        <input type=\"checkbox\" title=\"Buttons\" name=\"showButtons\" checked>\n        <header>Background</header>\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Image\" value=\"../_images/background1.jpg\">\n            <input type=\"color\" title=\"Color\" value=\"#000000\" selected>\n            <input type=\"video\" title=\"Video\" value=\"https://vimeo.com/428046504\">\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#ffffff\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.7\" condition=\"overlay && bg.type !== 'color'\">\n    </mbr-parameters>\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n    </div>\n    <div mbr-class=\"{'container': !fullWidth, 'container-fluid': fullWidth}\">\n        <div class=\"row justify-content-center\">\n            <div class=\"title col-md-12 col-lg-{{textWidth}}\">\n                <h3 class=\"mbr-section-title mbr-fonts-style align-center mb-4\" mbr-if=\"showTitle\" data-app-selector=\".mbr-section-title\" mbr-theme-style=\"display-1\"><b>Gradient borders with curves and 3D animation in CSS</b></h3>\n                <h4 class=\"mbr-section-subtitle align-center mbr-fonts-style mb-4\" mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle\" mbr-theme-style=\"display-5\">\n                    You can arrange your articles with the Mobirise website design software.\n                </h4>\n                \n    <div class=\"ticket-visual_visual\" id=\"ticket\">\n      <div class=\"left\"></div>\n      <div class=\"right\"></div>\n      <div class=\"ticket-visual-wrapper\">\n        <div class=\"ticket-visual_profile\">\n          <div class=\"ticket-profile_profile\">\n            <img src=\"@PROJECT_PATH@/assets/images/337888.jpg\" alt=\"medhatdawoud\" class=\"ticket-profile_image\">\n            <div class=\"ticket-profile_text\">\n              <p class=\"ticket-profile_name\">Medhat Dawoud</p>\n              <p class=\"ticket-profile_username\">\n                <span class=\"ticket-profile_githubIcon\">\n                  <img src=\"@PROJECT_PATH@/assets/images/github.svg\" alt>\n                </span>\n                medhatdawoud\n              </p>\n            </div>\n          </div>\n          <div class=\"ticket-event\">\n            <img src=\"@PROJECT_PATH@/assets/images/event-logos.png\" alt>\n          </div>\n        </div>\n        <div class=\"ticket-visual_ticket-number-wrapper\">\n          <div class=\"ticket-visual_ticket-number\">№ 014747</div>\n        </div>\n      </div>\n    </div>\n                \n                \n                <div class=\"mbr-section-btn align-center\" mbr-if=\"showButtons\" mbr-buttons mbr-theme-style=\"display-4\"><a class=\"btn btn-primary\" href=\"https://medhatdawoud.net/blog/gradient-borders-with-curves-and-3d-animation-in-css\" data-app-placeholder=\"Type Text\" target=\"_blank\">LEARN MORE</a>\n                    <a class=\"btn btn-primary-outline\" href=\"https://nextjs.org/conf/tickets/medhatdawoud\" data-app-placeholder=\"Type Text\" target=\"_blank\">LIVE DEMO</a></div>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_cid": "seAYD7gbxM",
+          "_anchor": "content4-0",
+          "_PHPplaceholders": [],
+          "_JSplaceholders": [],
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        }
+      ]
+    }
+  }
+}
